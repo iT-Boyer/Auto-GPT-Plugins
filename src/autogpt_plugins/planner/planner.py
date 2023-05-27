@@ -73,8 +73,8 @@ def generate_improved_plan(prompt: str) -> str:
             {
                 "role": "user",
                 "content": f"根据以下任务状态更新以下计划,保持.md格式:\n{prompt}\n"
-                f"在优化后的计划中包含当前任务,注意任务状态并用清单跟踪:\n{tasks}\n "
-                f"修订版本应遵循当前任务的要求。 ",
+                f"在优化后的计划中包含当前任务,记住任务状态并用清单跟踪:\n{tasks}\n "
+                f"修订版本应遵循当前任务的要求。",
             },
         ],
         max_tokens=int(max_tokens),

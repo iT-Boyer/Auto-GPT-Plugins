@@ -51,38 +51,38 @@ class PlannerPlugin(AutoGPTPluginTemplate):
 
         prompt.add_command(
             "check_plan",
-            "Read the plan.md with the next goals to achieve",
+            "查看plan.md以制定后续行动方案",
             {},
             check_plan,
         )
 
         prompt.add_command(
             "run_planning_cycle",
-            "Improves the current plan.md and updates it with progress",
+            "优化当前plan.md并根据进度进行更新",
             {},
             update_plan,
         )
 
         prompt.add_command(
             "create_task",
-            "creates a task with a task id, description and a completed status of False ",
+            "创建一个包含任务ID、描述和未完成状态的工作项 ",
             {
                 "task_id": "<int>",
-                "task_description": "<The task that must be performed>",
+                "task_description": "<必须执行的任务>",
             },
             create_task,
         )
 
         prompt.add_command(
             "load_tasks",
-            "Checks out the task ids, their descriptionsand a completed status",
+            "检查任务ID、描述和完成状态",
             {},
             load_tasks,
         )
 
         prompt.add_command(
             "mark_task_completed",
-            "Updates the status of a task and marks it as completed",
+            "更新工作项状态并标记为已完成",
             {"task_id": "<int>"},
             update_task_status,
         )
