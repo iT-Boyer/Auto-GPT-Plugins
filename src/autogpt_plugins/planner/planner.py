@@ -16,12 +16,11 @@ def check_plan():
         with open(file_name, "w") as file:
             file.write(
                 """
-                # Task List and status:
-                - [ ] Create a detailed checklist for the current plan and goals
-                - [ ] Finally, review that every new task is completed
-                
-                ## Notes:
-                - Use the run_planning_cycle command frequently to keep this plan up to date.
+                # 任务清单和状态:
+                - [ ] 为当前计划和目标创建详细的清单
+                - [ ] 最后,检查每项新任务是否完成
+                ## 备注:
+                - 频繁使用run_planning_cycle命令以保持此计划最新。
                         """
             )
         print(f"{file_name} created.")
